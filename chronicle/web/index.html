@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Questions · chronicle</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <aside class="sidebar">
+    <a href="/" class="brand">chronicle</a>
+    <nav aria-label="Workspace">
+      <button class="nav-button active" data-view="ask" aria-current="page">Questions</button>
+      <button class="nav-button" data-view="conflicts">Conflicts</button>
+      <button class="nav-button" data-view="changes">Changes</button>
+    </nav>
+    <section class="dataset" aria-labelledby="dataset-label">
+      <h2 id="dataset-label" class="sidebar-label">Dataset</h2>
+      <div id="corpus-name" class="dataset-name">Loading…</div>
+      <div id="corpus-detail" class="muted"></div>
+      <h2 class="sidebar-label snapshots-label">Snapshots</h2>
+      <div id="snapshot-list" class="snapshot-list"></div>
+    </section>
+  </aside>
+  <div class="workspace">
+    <header class="topbar">
+      <span>Knowledge system <span class="breadcrumb-divider">/</span> <span id="current-view">Questions</span></span>
+      <span id="observation-summary" class="muted"></span>
+    </header>
+    <main id="main">
+      <div id="global-error" role="alert" class="error hidden"></div>
+      <section id="view-ask" class="view">
+        <div class="page-heading"><h1>Questions</h1></div>
+        <form id="question-form" class="question-form">
+          <label for="question">Question</label>
+          <textarea id="question" rows="2" maxlength="8000" required placeholder="Ask about a rate, fee, or branch."></textarea>
+          <div class="form-controls">
+            <div class="date-field">
+              <label for="as-of">As of</label>
+              <input id="as-of" type="date" aria-describedby="date-help">
+              <button type="button" id="latest-button" class="text-button">Latest</button>
+            </div>
+            <label class="sr-only" for="example-question">Example question</label>
+            <select id="example-question">
+              <option value="">Examples</option>
+              <option value="auto">Auto loan APR</option>
+              <option value="certificate">Certificate APY</option>
+              <option value="missing">Unpublished mortgage rate</option>
+            </select>
+            <div class="submit-controls"><span class="keyboard-hint">Ctrl + Enter</span><button id="ask-button" type="submit" class="primary">Ask</button></div>
+          </div>
+          <div id="date-help" class="field-help">Uses the latest snapshot on or before the selected date.</div>
+        </form>
+        <div id="answer-area" aria-live="polite"></div>
+        <section id="timeline-area" class="hidden" aria-label="Answer history"></section>
+      </section>
+      <section id="view-conflicts" class="view hidden">
+        <div class="page-heading"><h1>Conflicts</h1><span id="conflict-summary" class="muted"></span></div>
+        <div class="toolbar">
+          <label class="search-label"><span class="sr-only">Filter topics</span><input id="conflict-search" type="search" placeholder="Filter by topic or value"></label>
+          <label class="filter-label">Type<select id="conflict-type"><option value="all">All records</option><option value="active">Active disagreements</option><option value="historical">Historical changes</option><option value="unresolved">Unresolved</option></select></label>
+        </div>
+        <div id="conflict-list"></div>
+      </section>
+      <section id="view-changes" class="view hidden">
+        <div class="page-heading"><h1>Changes</h1><label class="filter-label">Snapshot<select id="change-snapshot"></select></label></div>
+        <div id="changes-area"></div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

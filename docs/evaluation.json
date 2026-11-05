@@ -1,0 +1,141 @@
+{
+  "environment": {
+    "python": "3.11.16",
+    "platform": "Windows",
+    "date": "2026-11-05",
+    "optional_external_judge": false,
+    "hidden_conflict_gold_available": false
+  },
+  "starter": {
+    "qa_score": 0.093,
+    "questions": 40,
+    "stale_trap_hits": 0,
+    "errors": 0,
+    "by_category": {
+      "branch_info": {
+        "n": 6,
+        "score": 0.1667
+      },
+      "conflict_resolution": {
+        "n": 3,
+        "score": 0.0
+      },
+      "current_value": {
+        "n": 3,
+        "score": 0.0
+      },
+      "entity_attribution": {
+        "n": 4,
+        "score": 0.25
+      },
+      "list_completeness": {
+        "n": 4,
+        "score": 0.0
+      },
+      "should_refuse": {
+        "n": 3,
+        "score": 0.0
+      },
+      "stale_trap": {
+        "n": 7,
+        "score": 0.1429
+      },
+      "temporal_as_of": {
+        "n": 4,
+        "score": 0.25
+      },
+      "tier_disambiguation": {
+        "n": 6,
+        "score": 0.0
+      }
+    },
+    "consistency": {
+      "paraphrase_groups": 20,
+      "paraphrase_consistency": 1.0,
+      "repeat_checks": 20,
+      "repeat_consistency": 1.0,
+      "score": 1.0
+    },
+    "speed": {
+      "p50_s": 0.1,
+      "p95_s": 0.12,
+      "max_s": 0.12,
+      "score": 1.0
+    },
+    "pillars": {
+      "accuracy": 0.093,
+      "consistency": 0.093,
+      "speed": 0.093
+    },
+    "final_score": 0.093,
+    "ingest_seconds": 0.0,
+    "ingest_over_limit": false
+  },
+  "chronicle": {
+    "qa_score": 0.9419,
+    "questions": 40,
+    "stale_trap_hits": 0,
+    "errors": 0,
+    "by_category": {
+      "branch_info": {
+        "n": 6,
+        "score": 0.8667
+      },
+      "conflict_resolution": {
+        "n": 3,
+        "score": 1.0
+      },
+      "current_value": {
+        "n": 3,
+        "score": 1.0
+      },
+      "entity_attribution": {
+        "n": 4,
+        "score": 0.9625
+      },
+      "list_completeness": {
+        "n": 4,
+        "score": 0.75
+      },
+      "should_refuse": {
+        "n": 3,
+        "score": 1.0
+      },
+      "stale_trap": {
+        "n": 7,
+        "score": 1.0
+      },
+      "temporal_as_of": {
+        "n": 4,
+        "score": 1.0
+      },
+      "tier_disambiguation": {
+        "n": 6,
+        "score": 1.0
+      }
+    },
+    "consistency": {
+      "paraphrase_groups": 20,
+      "paraphrase_consistency": 1.0,
+      "repeat_checks": 20,
+      "repeat_consistency": 1.0,
+      "score": 1.0
+    },
+    "speed": {
+      "p50_s": 0.01,
+      "p95_s": 0.1,
+      "max_s": 0.1,
+      "score": 1.0
+    },
+    "pillars": {
+      "accuracy": 0.9419,
+      "consistency": 0.9419,
+      "speed": 0.9419
+    },
+    "final_score": 0.9419,
+    "ingest_seconds": 5.7,
+    "ingest_over_limit": false
+  },
+  "independent_tests": 47,
+  "citation_fragments_verified": 169
+}

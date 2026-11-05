@@ -1,0 +1,23 @@
+name: Tests
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python: ['3.11', '3.12']
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5, verified 2026-11-05
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6, verified 2026-11-05
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m unittest discover -v
+      - run: python scripts/audit_release.py
+      - run: python -m chronicle --demo ask "What is the APR for a 60-month auto loan on a 2025 vehicle?"
